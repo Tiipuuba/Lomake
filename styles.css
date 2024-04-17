@@ -1,0 +1,10 @@
+.left {
+    width: 40%;
+    float: left;
+    text-align: right;
+    padding-right: 5px;
+}
+.center {
+    display: flex;
+    justify-content: center;
+}

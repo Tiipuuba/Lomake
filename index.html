@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#411 Lomakkeen validointi</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+    <h1 class="center">Rekisteröitymislomake</h1>
+    <h3 class="center">Siirry kentästä toiseen tab-näppäimellä.</h3>
+    <div class="fields">
+        <div class="user">
+            <label class="left">*Käyttäjä ID:</label>
+            <input type="text" size="10" id="idk" onfocusout="userCheck()">
+            <a id="idnote"></a>
+        </div>
+        <p></p>
+        <div class="password">
+            <label class="left">*Salasana: </label>
+            <input type="text" size="10" id="password" onfocusout="passwordCheck()">
+            <a id="pwnote"></a>
+        </div>
+        <br>
+        <div class="name">
+            <label class="left">*Nimi: </label>
+            <input type="text" size="35" id="name" onfocusout="nameCheck()">
+            <a id="namenote"></a>
+        </div>
+        <p></p>
+        <div class="address">
+            <label class="left">*Osoite: </label>
+            <input type="text" size="35" id="address" onfocusout="addressCheck()">
+            <a id="addressnote"></a>
+        </div>
+        <p></p>
+        <div class="country">
+            <label class="left">*Maa: </label>
+            <select id="country">
+                <option value="null" disabled selected>(Valitse maa)</option>
+                <option value="suomi">Suomi</option>
+                <option value="ruotsi">Ruotsi</option>
+                <option value="norja">Norja</option>
+                <option value="turku">Turku</option>
+            </select>
+            <a id="countrynote"></a>
+        </div>
+        <p></p>
+        <div class="zipcode">
+            <label class="left">*Postinumero: </label>
+            <input type="text" size="15" id="zipcode" onfocusout="zipcodeCheck()">
+            <a id="zipcodenote"></a>
+        </div>
+        <p></p>
+        <div class="email">
+            <label class="left">*Sähköposti: </label>
+            <input type="text" size="35" id="email" onfocusout="emailCheck()">
+            <a id="emailnote"></a>
+        </div>
+        <p></p>
+        <div class="gender">
+            <label class="left">*Sukupuoli: </label>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Mies</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Nainen</label>
+            <a id="gendernote"></a>
+        </div>
+        <p></p>
+        <div class="lang">
+            <label class="left">*Kieli: </label>
+            <input type="checkbox" id="suomi" name="lang" value="suomi">
+            <label for="suomi">Suomi</label>
+            <input type="checkbox" id="muuks" name="lang" value="muuks">
+            <label for="muuks">Muu kuin suomi</label>
+            <a id="langnote"></a>
+        </div>
+        <p></p>
+        <div class="moreinfo">
+            <label class="left">Lisätietoja: </label>
+            <textarea id="moreinfo" name="moreinfo" rows="4" cols="40"></textarea>
+        </div>
+        <p></p>
+        <div class="center">
+            <button type="button" onclick="testAll()"><b>Lähetä</b></button>
+        </div>
+        <div class="center">
+            <p id="sendnote"></p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
